@@ -1,0 +1,6 @@
+{
+  "application_url": "https://myfin.by/currency/torgi-na-bvfb",
+  "drive_path": "src/test/resources/webdrivers",
+  "nb_rb_url": "https://www.nbrb.by/api/exrates/rates/%s",
+  "test_screenshot_path": "/target/screenshots"
+}

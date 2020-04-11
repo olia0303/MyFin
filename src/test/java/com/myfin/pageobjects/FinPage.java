@@ -13,7 +13,7 @@ public  class FinPage {
     public static final String ACTIVE_TABLE_XPATH = "//div[@class='content_i converter rates-table']";
     private SelenideElement el;
     private SelenideElement table;
-    
+
     public FinPage openPage(){
         open(MAIN_PAGE);
         return this;
@@ -33,8 +33,8 @@ public  class FinPage {
         return el.getText();
     }
     
-    public String getWeightedAverageCourses(String rowName){
+    public double getWeightedAverageCourses(String rowName){
         getValueByColumnName("Валюта");
-        return getCellValue(rowName);
+        return Double.parseDouble(getCellValue(rowName));
     }
 }

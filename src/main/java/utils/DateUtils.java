@@ -35,5 +35,4 @@ public class DateUtils {
         public static String getDate(long countDays, String outPattern) {
             return convertDate(LocalDate.now().plusDays(countDays).toString(), "yyyy-MM-dd", outPattern);
         }
-
-}
+    }

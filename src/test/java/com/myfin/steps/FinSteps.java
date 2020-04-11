@@ -45,15 +45,15 @@ public class FinSteps {
     
     @Step("Validate Weighted Average Exchange Rates")
     public FinSteps validateAverageExRatesForTodayTrading(Currency currency) {
-        String actualValue = finPage.getWeightedAverageCourses(currency.getName());
-        String value = "0.01";
+        double actualValue = finPage.getWeightedAverageCourses(currency.getName());
+        double value = 0.01;
         assertThat(actualValue, (greaterThan(value)));
         return this;
     }
 
     @Step("Validate compare exchange rates")
     public FinSteps validateCompareExchangeRates(Currency currency, String id) {
-        String weightedAverageRates = finPage.getWeightedAverageCourses(currency.getName());
+        double weightedAverageRates = finPage.getWeightedAverageCourses(currency.getName());
         Rates obj = new RatesAdapter().get(id);
         assertThat(weightedAverageRates, (equalTo(obj.getOfficialRate())));
         return this;

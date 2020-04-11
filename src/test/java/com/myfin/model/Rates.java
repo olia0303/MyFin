@@ -21,5 +21,5 @@ public class Rates {
 
     @Expose
     @SerializedName("Cur_OfficialRate")
-    String officialRate;
+    double officialRate;
 }
