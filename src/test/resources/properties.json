@@ -1,0 +1,8 @@
+{
+  "my_fin_url": "https://myfin.by/currency/torgi-na-bvfb",
+  "nb_rb_url": "https://www.nbrb.by/api/exrates/rates/%s",
+  "delta": 0.01,
+  "usd_id": "145",
+  "eur_id": "292",
+  "rub_id": "298"
+}
