@@ -7,8 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public  class FinPage {
-  
-     public static final String ACTIVE_TABLE_XPATH = "//div[@class='content_i converter rates-table']";
+    public static final String ACTIVE_TABLE_XPATH = "//div[@class='content_i converter rates-table']";
     private SelenideElement el;
     private SelenideElement table;
 
