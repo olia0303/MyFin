@@ -2,20 +2,18 @@ package com.myfin.pageobjects;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import utils.PropertyManager;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public  class FinPage {
   
-    public static final String MAIN_PAGE = new PropertyManager().get("application.url.myfin");
-    public static final String ACTIVE_TABLE_XPATH = "//div[@class='content_i converter rates-table']";
+     public static final String ACTIVE_TABLE_XPATH = "//div[@class='content_i converter rates-table']";
     private SelenideElement el;
     private SelenideElement table;
 
-    public FinPage openPage(){
-        open(MAIN_PAGE);
+    public FinPage openPage(String url){
+        open(url);
         return this;
     }
 

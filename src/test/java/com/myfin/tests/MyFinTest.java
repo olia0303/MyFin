@@ -7,12 +7,12 @@ import org.testng.annotations.Test;
 public class MyFinTest extends BaseTest {
     @Test(description = "Check weighted average exchange rates for today's trading")
     public void checkExchangeRatesTest() {
-        finSteps.openPage();
-        finSteps.validateAverageExRatesForTodayTrading(Currency.USD);
-        finSteps.validateAverageExRatesForTodayTrading(Currency.EUR);
-        finSteps.validateAverageExRatesForTodayTrading(Currency.RUB);
-        finSteps.validateCompareExchangeRates(Currency.USD, "145");
-        finSteps.validateCompareExchangeRates(Currency.EUR, "292");
-        finSteps.validateCompareExchangeRates(Currency.RUB, "298");
+        finSteps.openPage(jsonReader.getProperties().getMy_fin_url());
+        finSteps.validateAverageExRatesForTodayTrading(Currency.USD, jsonReader.getProperties().getValue());
+        finSteps.validateAverageExRatesForTodayTrading(Currency.EUR, jsonReader.getProperties().getValue());
+        finSteps.validateAverageExRatesForTodayTrading(Currency.RUB, jsonReader.getProperties().getValue());
+        finSteps.validateCompareExchangeRates(Currency.USD, jsonReader.getProperties().getUsd_id(), jsonReader.getProperties().getNb_rb_url());
+        finSteps.validateCompareExchangeRates(Currency.EUR, jsonReader.getProperties().getEur_id(), jsonReader.getProperties().getNb_rb_url());
+        finSteps.validateCompareExchangeRates(Currency.RUB, jsonReader.getProperties().getRub_id(), jsonReader.getProperties().getNb_rb_url());
     }
 }

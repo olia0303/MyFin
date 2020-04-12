@@ -7,10 +7,10 @@ import lombok.Data;
 
 @Builder
 @Data
-public class Rates {
+public class Rate {
     @Expose
     @SerializedName("Cur_ID")
-    String currencyId;
+    String id;
 
     @Expose
     @SerializedName("Date")

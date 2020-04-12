@@ -1,6 +1,8 @@
 {
-  "application_url": "https://myfin.by/currency/torgi-na-bvfb",
-  "drive_path": "src/test/resources/webdrivers",
+  "my_fin_url": "https://myfin.by/currency/torgi-na-bvfb",
   "nb_rb_url": "https://www.nbrb.by/api/exrates/rates/%s",
-  "test_screenshot_path": "/target/screenshots"
+  "value": 0.01,
+  "usd_id": "145",
+  "eur_id": "292",
+  "rub_id": "298"
 }
